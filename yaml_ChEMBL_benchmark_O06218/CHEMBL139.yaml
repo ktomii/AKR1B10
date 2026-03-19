@@ -1,0 +1,60 @@
+version: 1
+sequences:
+  - protein:
+      id: [akr1b]
+      sequence: MATFVELSTKAKMPIVGLGTWKSPLGKVKEAVKVAIDAGYRHIDCAYVYQNEHEVGEAIQEKIQEKAVKREDLFIVSKLWPTFFERPLVRKAFEKTLKDLKLSYLDVYLIHWPQGFKSGDDLFPKDDKGNAIGGKATFLDAWEAMEELVDEGLVKALGVSNFSHFQIEKLLNKPGLKYKPVTNQVECHPYLTQEKLIQYCHSKGITVTAYSPLGSPDRPWAKPEDPSLLEDPKIKEIAAKHKKTAAQVLIRFHIQRNVIVIPKSVTPARIVENIQVFDFKLSDEEMATILSFNRNWRACNVLQSSHLEDYPFNAEY
+      msa: ./input/msa/msa_O60218.a3m
+  - ligand:
+      id: NADPH
+      ccd: NAP
+  - ligand:
+      id: INH
+      smiles: O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl
+constraints:
+  - pocket:
+      binder: NADPH
+      contacts:
+        - [akr1b, 19]
+        - [akr1b, 20]
+        - [akr1b, 21]
+        - [akr1b, 22]
+        - [akr1b, 44]
+        - [akr1b, 49]
+        - [akr1b, 78]
+        - [akr1b, 111]
+        - [akr1b, 112]
+        - [akr1b, 160]
+        - [akr1b, 161]
+        - [akr1b, 184]
+        - [akr1b, 210]
+        - [akr1b, 211]
+        - [akr1b, 212]
+        - [akr1b, 213]
+        - [akr1b, 214]
+        - [akr1b, 215]
+        - [akr1b, 216]
+        - [akr1b, 217]
+        - [akr1b, 229]
+        - [akr1b, 244]
+        - [akr1b, 246]
+        - [akr1b, 261]
+        - [akr1b, 262]
+        - [akr1b, 263]
+        - [akr1b, 264]
+        - [akr1b, 265]
+        - [akr1b, 266]
+        - [akr1b, 269]
+        - [akr1b, 272]
+        - [akr1b, 273]
+        - [akr1b, 299]
+      max_distance: 4.5
+  - pocket:
+      binder: INH
+      contacts:
+        - [akr1b, 49]
+        - [akr1b, 111]
+        - [akr1b, 112]
+      max_distance: 4.5
+properties:
+  - affinity:
+      binder: INH
